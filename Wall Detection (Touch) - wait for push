@@ -1,15 +1,15 @@
-const tSensors touchSensor = (tSensors) S1;
+const tSensors touchSensor = (tSensors) S1;			// call up fial specific to NXT
 
-task main()
+task main()							// the main function of this program
 {
-	while(SensorValue(touchSensor) == 0)
+	while(SensorValue(touchSensor) == 0)			// when the sensor is not touching anything 
 	{
-		motor[motorC] = 100;
-		motor[motorB] = 100;
+		motor[motorC] = 100;				// motorC runs at 100 power -- moves forward
+		motor[motorB] = 100;				// motorB runs at 100 power -- moves forward
 	}
 	
-	motor[motorC] = -75;
-	motor[motorB] = -75;
+	motor[motorC] = -75;					// motorC runs at -75 power -- moves backwards
+	motor[motorB] = -75;					// motorB runs at -75 power -- moves backwards
 	
-	wait1Msec(1000);
+	wait1Msec(1000);					// program waits 1000 milliseconds before looping
 }
