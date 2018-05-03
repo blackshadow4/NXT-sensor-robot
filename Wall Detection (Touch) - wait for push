@@ -1,0 +1,15 @@
+const tSensors touchSensor = (tSensors) S1;
+
+task main()
+{
+	while(SensorValue(touchSensor) == 0)
+	{
+		motor[motorC] = 100;
+		motor[motorB] = 100;
+	}
+	
+	motor[motorC] = -75;
+	motor[motorB] = -75;
+	
+	wait1Msec(1000);
+}
