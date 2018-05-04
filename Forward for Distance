@@ -1,0 +1,11 @@
+task main()									//main task of the code
+{
+	nMotorEncoder[motorB] = 0;				//make sure motorB starts counting at the 0 point
+	nMoterEncoder[motorC] = 0;				//make sure motorC starts counting at the 0 point
+	
+	while(nMotorEncoder[motorB] < 1800)		//drive forward UNTIL encoder value is reached (= 1800) --> motor spins while encoder value is less than 1800
+	{										//the motor makes 5 rotations while count is at a 1800 cap
+		motor[motorC] = 50;					//robot moves forward at 50 percent power
+		motor[motorB] = 50;					//robot moves forward at 50 percent power
+	}
+}
