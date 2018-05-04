@@ -1,0 +1,16 @@
+task main()									                                                                //main task of the code
+{
+	nMotorEncoder[motorB] = 0;				                                                        //make sure motorB starts counting at the 0 point
+	nMoterEncoder[motorC] = 0;				                                                        //make sure motorC starts counting at the 0 point
+	
+  nMotorEncoderTarget[motorB] = 1800;                                                       //Set the Encoder Target of MotorB to 1800 encoder counts
+  nMotorEncoderTarget[motorC] = 1800;                                                       //Set the Encoder Target of MotorC to 1800 encoder counts
+  
+  motor[motorC] = 50;					                                                              //robot moves forward at 50 percent power
+	motor[motorB] = 50;					                                                              //robot moves forward at 50 percent power
+  
+	while(nMotorRunState[motorB] != runStateIdle || nMotorRunState[motorC] != runStateIdle)		//loop runs while motor is NOT running
+	{										                                                                      //loop runs until its condition becomes false
+
+	}
+}
