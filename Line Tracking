@@ -1,0 +1,31 @@
+const tSensors lightSensor				= (tSensors) S1; //sensorLightAction
+const tSensors touchSensor				= (tSensors) S2; //sensorTouch
+//*!! CLICK to edit 'wizard' created sensor & motor configuration.
+
+task main()
+{
+
+	while (SensorValue(touchSensor) == 0)
+	{
+	
+		if(SensorValue(lightSensor) < 43)
+		{
+		
+			motor[motorC] = 0;
+			motor[motorB] = 80;
+			
+		}
+		
+		else
+		{
+		
+			motor[motorC] = 80;
+			motor[motorB] = 0;
+		}
+			
+	}
+	
+	motor[motorC] = 0;
+	motor[motorB] = 0;
+	
+}
